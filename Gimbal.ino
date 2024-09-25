@@ -89,6 +89,10 @@ void  loop(){
   GyX=Wire.read()<<8|Wire.read();  
   GyY=Wire.read()<<8|Wire.read();  
   GyZ=Wire.read()<<8|Wire.read();  
+  Serial.print("Accelerometer: ");
+  Serial.print("X = "); Serial.print(AcX);
+  Serial.print(" | Y = "); Serial.print(AcY);
+  Serial.print(" | Z = ");  Serial.println(AcZ); 
 
   count++;
   if(count == MAX)
