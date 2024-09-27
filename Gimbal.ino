@@ -13,7 +13,6 @@ int16_t queue[MAX];
 int16_t front = 0;
 int16_t rear = 0;
 int16_t count = 0;
-int16_t temperature = 0;
 bool flag = false;
 
 bool isFull()
@@ -82,7 +81,7 @@ void  setup(){
   Wire.write(0);    
   Wire.endTransmission(true);
   myservo.attach(9);  // attaches the servo on pin 9 to the servo object
-  val = 0;//analogRead(potpin);            // reads the value of the potentiometer (value between 0 and 1023)
+  val = 0;
   Serial.begin(9600);
 }
 void  loop(){
@@ -120,7 +119,6 @@ void  loop(){
   if(flag)
   {
     avg = sum/(MAX-1);
-    if(avg)
     //Serial.print("Avg: "); 
     Serial.println(avg); 
     int dequeVal = dequeue();
