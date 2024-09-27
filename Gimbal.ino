@@ -13,6 +13,7 @@ int16_t queue[MAX];
 int16_t front = 0;
 int16_t rear = 0;
 int16_t count = 0;
+int16_t temperature = 0;
 bool flag = false;
 
 bool isFull()
